@@ -127,6 +127,7 @@ namespace TonkaExternalClient {
         public HotkeyBox(Keys key){Hotkey=key;ReadOnly=true;ShortcutsEnabled=false;Text=Label(key);TextAlign=HorizontalAlignment.Center;BackColor=UiTheme.Field;ForeColor=Color.FromArgb(235,238,242);BorderStyle=BorderStyle.FixedSingle;Font=new Font("Segoe UI",9F,FontStyle.Bold);Cursor=Cursors.Hand;}
         protected override void OnKeyDown(KeyEventArgs e){Hotkey=e.KeyCode;Text=Label(Hotkey);e.SuppressKeyPress=true;base.OnKeyDown(e);}
         protected override void OnMouseDown(MouseEventArgs e){Keys k=Keys.None;if(e.Button==MouseButtons.Middle)k=Keys.MButton;else if(e.Button==MouseButtons.XButton1)k=Keys.XButton1;else if(e.Button==MouseButtons.XButton2)k=Keys.XButton2;if(k!=Keys.None){Hotkey=k;Text=Label(k);}base.OnMouseDown(e);}
+        protected override void OnGotFocus(EventArgs e){base.OnGotFocus(e);SelectionStart=Text.Length;SelectionLength=0;}
         public void SetKey(Keys key){Hotkey=key;Text=Label(key);}
         static string Label(Keys key){string s=key.ToString();if(s.StartsWith("D")&&s.Length==2&&Char.IsDigit(s[1]))return s.Substring(1);return s.ToUpperInvariant();}
     }
