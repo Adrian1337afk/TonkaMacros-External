@@ -1,11 +1,11 @@
-TONKAMACROS EXTERNAL CLIENT - VERSION 4.2
+TONKAMACROS EXTERNAL CLIENT - VERSION 4.3
 Final verification: 2026-09-27
 
 BUILD
 - Windows x64 WinForms executable
-- File version: 4.2.0.0
-- SHA-256: 287E262440296DBEA2F20ACDC447914FC3D8D7F643E75C2458BC5A94BEA896BB
-- Size: 64,512 bytes
+- File version: 4.3.0.0
+- SHA-256: 6FA7A7FBCDE2D695EBFE28EB575CD271CA64AF221AE34E891765D045724D6565
+- Size: 73,728 bytes
 
 TESTS
 - Compilation: PASS
@@ -22,6 +22,7 @@ TESTS
 - Obby Air Place: complete 3-click anchor cycle + 2 obsidian place attempts
 - Pre-Bow Cart: bow hold/release + rail + cart 1 + cart 2
 - Performance: 5 ms UI polling, AboveNormal worker, sleep-based holds
+- UI 4.3: redesigned owner-drawn interface (toggles, fields, sidebar, theme page); macro engine unchanged
 
 EXTERNAL INPUT BOUNDARY
 - Uses Windows SendInput for keyboard and mouse events.

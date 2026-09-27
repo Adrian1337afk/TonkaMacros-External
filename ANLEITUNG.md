@@ -1,4 +1,4 @@
-# TonkaMacros External Client – Version 4.2
+# TonkaMacros External Client – Version 4.3
 
 Eigenständiger Windows-Input-Client. Er liest keinen Minecraft-Speicher, verändert keine Spieldateien und erzeugt keine Spielpakete. Die Abläufe bestehen ausschließlich aus simulierten Tastatur- und Maustasten-Eingaben. Der Mauszeiger wird nicht bewegt.
 
