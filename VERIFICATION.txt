@@ -1,0 +1,39 @@
+TONKAMACROS EXTERNAL CLIENT - VERSION 4.2
+Final verification: 2026-09-27
+
+BUILD
+- Windows x64 WinForms executable
+- File version: 4.2.0.0
+- SHA-256: 287E262440296DBEA2F20ACDC447914FC3D8D7F643E75C2458BC5A94BEA896BB
+- Size: 64,512 bytes
+
+TESTS
+- Compilation: PASS
+- Precision scheduler self-test: PASS (3/3 actions)
+- Static forbidden-API audit: PASS
+- Visual render verification: Crystal, Anchor suite, Obby Air Place and Themes PASS
+- Persisted individual module toggles: 13/13
+- Single Anchor: exact Key > Right Click > Key > Right Click > Key > Right Click sequence
+- Stun Slam: exactly 1 axe click + 10 ms switch + 1 mace click
+- Auto D-Tap: sword hit + obsidian + 2 crystal place/break cycles across a 520 ms window
+- Themes: custom accent/text hex colors, color picker, quick palettes, opacity and 5 fonts
+- Double Anchor: 6 right-clicks, 2 charges, 2 totem explosions, uniform step delay
+- Tripple Anchor: 9 right-clicks, 3 charges, 3 totem explosions, uniform step delay
+- Obby Air Place: complete 3-click anchor cycle + 2 obsidian place attempts
+- Pre-Bow Cart: bow hold/release + rail + cart 1 + cart 2
+- Performance: 5 ms UI polling, AboveNormal worker, sleep-based holds
+
+EXTERNAL INPUT BOUNDARY
+- Uses Windows SendInput for keyboard and mouse events.
+- Uses GetAsyncKeyState for configured activation keys.
+- Uses foreground-window metadata only for the Minecraft/Java focus lock.
+- No ReadProcessMemory or WriteProcessMemory.
+- No process injection or remote threads.
+- No Minecraft packets, sockets, Netty, clickSlot, or interaction-manager calls.
+
+SAFETY
+- Every module has its own ON/OFF switch.
+- Global ARM CLIENT switch is additionally required.
+- END is the global panic stop.
+- Focus loss cancels the sequence and releases mouse buttons.
+- Modules are disabled by default.
